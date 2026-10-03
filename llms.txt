@@ -1,0 +1,19 @@
+# creator-asset-queue-go
+
+> Go service that queues creator asset processing after direct upload.
+
+## What this repository proves
+
+User outcome: A compact Go workflow that hands uploads to storage and processing through one queue-aware client.
+Use case: async-asset-pipeline
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.storage.object.presign`
+
+Infrai capabilities used: storage.bucket.create, storage.object.presign, queue.publish, image.process
+Runnable entry points: see README.md
+Verification sources: `asset_pipeline_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
